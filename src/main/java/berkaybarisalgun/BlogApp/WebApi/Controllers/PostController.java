@@ -1,6 +1,7 @@
 package berkaybarisalgun.BlogApp.WebApi.Controllers;
 
 import berkaybarisalgun.BlogApp.Business.Abstracts.PostService;
+import berkaybarisalgun.BlogApp.Business.Requests.CreatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Requests.UpdatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Responses.GetAllPostsResponse;
 import berkaybarisalgun.BlogApp.Business.Responses.GetPostByIdResponse;
@@ -32,5 +33,10 @@ public class PostController {
     @PutMapping
     public void update(@RequestBody() UpdatePostRequest updatePostRequest){
         this.postService.update(updatePostRequest);
+    }
+
+    @PostMapping
+    public void add(@RequestBody() CreatePostRequest createPostRequest){
+        postService.add(createPostRequest);
     }
 }

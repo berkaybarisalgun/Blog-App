@@ -1,5 +1,6 @@
 package berkaybarisalgun.BlogApp.Business.Abstracts;
 
+import berkaybarisalgun.BlogApp.Business.Requests.CreatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Requests.UpdatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Responses.GetAllPostsResponse;
 import berkaybarisalgun.BlogApp.Business.Responses.GetPostByIdResponse;
@@ -11,5 +12,7 @@ public interface PostService {
     GetPostByIdResponse getPostByIdResponse(int id);
 
     void update(UpdatePostRequest updatePostRequest);
+
+    void add(CreatePostRequest createPostRequest);
 
 }

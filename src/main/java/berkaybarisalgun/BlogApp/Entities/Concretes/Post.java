@@ -5,13 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
+import java.util.Timer;
 
 @Table(name="post")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@EntityListeners(PostListener.class)
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +31,7 @@ public class Post {
     //content: required, body content of the post which uses the Markdown format;
 
     @Column(name="create_time")
-    private String create_time;
+    private LocalDateTime create_time;
 
     @Column(name="author_id")
     private int author_id;

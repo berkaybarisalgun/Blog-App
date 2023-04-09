@@ -1,6 +1,7 @@
 package berkaybarisalgun.BlogApp.Business.Concretes;
 
 import berkaybarisalgun.BlogApp.Business.Abstracts.PostService;
+import berkaybarisalgun.BlogApp.Business.Requests.CreatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Requests.UpdatePostRequest;
 import berkaybarisalgun.BlogApp.Business.Responses.GetAllPostsResponse;
 import berkaybarisalgun.BlogApp.Business.Responses.GetPostByIdResponse;
@@ -50,6 +51,12 @@ public class PostManager implements PostService {
     @Override
     public void update(UpdatePostRequest updatePostRequest) {
         Post post=modelMapperService.forRequest().map(updatePostRequest,Post.class);
+        postRepository.save(post);
+    }
+
+    @Override
+    public void add(CreatePostRequest createPostRequest) {
+        Post post=modelMapperService.forRequest().map(createPostRequest,Post.class);
         postRepository.save(post);
     }
 
