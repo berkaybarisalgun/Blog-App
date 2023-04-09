@@ -1,4 +1,4 @@
-package berkaybarisalgun.BlogApp.Business.Responses;
+package berkaybarisalgun.BlogApp.Business.Responses.PostResponses;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

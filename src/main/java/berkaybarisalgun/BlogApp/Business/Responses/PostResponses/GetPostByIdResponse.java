@@ -1,4 +1,5 @@
-package berkaybarisalgun.BlogApp.Business.Requests;
+package berkaybarisalgun.BlogApp.Business.Responses.PostResponses;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,11 +8,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreatePostRequest {
+public class GetPostByIdResponse {
+    private int id;
 
     private String title;
 
     private String content;
+
+    private String create_time;
 
     private int author_id;
 }
