@@ -1,7 +1,8 @@
 package berkaybarisalgun.BlogApp.Business.Concretes;
 
 import berkaybarisalgun.BlogApp.Business.Abstracts.CommentService;
-import berkaybarisalgun.BlogApp.Business.Requests.PostRequests.CreateCommentRequest;
+import berkaybarisalgun.BlogApp.Business.Requests.CommentRequests.CreateCommentRequest;
+import berkaybarisalgun.BlogApp.Business.Requests.CommentRequests.UpdateCommentRequest;
 import berkaybarisalgun.BlogApp.Business.Responses.CommentResponses.GetCommentByIdResponse;
 import berkaybarisalgun.BlogApp.Core.Utilities.mappers.ModelMapperService;
 import berkaybarisalgun.BlogApp.DataAccess.Abstracts.CommentRepository;
@@ -30,5 +31,17 @@ public class CommentManager implements CommentService {
         Comment comment=modelMapperService.forRequest().map(createCommentRequest,Comment.class);
         commentRepository.save(comment);
 
+    }
+
+    @Override
+    public void update(UpdateCommentRequest updateCommentRequest) {
+        Comment comment=modelMapperService.forRequest().map(updateCommentRequest,Comment.class);
+        commentRepository.save(comment);
+
+    }
+
+    @Override
+    public void delete(int id) {
+        commentRepository.deleteById(id);
     }
 }

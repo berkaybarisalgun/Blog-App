@@ -21,6 +21,6 @@ public class GetCommentByIdResponse {
 
     private String email;
 
-    private Post post;
+    private String post_name;
 
 }
