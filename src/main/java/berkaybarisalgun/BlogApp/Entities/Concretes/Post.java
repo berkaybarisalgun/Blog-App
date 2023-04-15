@@ -33,8 +33,7 @@ public class Post {
     @Column(name="create_time")
     private LocalDateTime create_time;
 
-    @Column(name="author_id")
-    private int author_id;
+
 
     @ManyToOne
     @JoinColumn(name = "user_id")

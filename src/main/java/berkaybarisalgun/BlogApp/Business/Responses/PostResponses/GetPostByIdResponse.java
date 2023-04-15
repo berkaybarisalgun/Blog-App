@@ -17,5 +17,7 @@ public class GetPostByIdResponse {
 
     private String create_time;
 
+    private int user_id;
+
     private int author_id;
 }

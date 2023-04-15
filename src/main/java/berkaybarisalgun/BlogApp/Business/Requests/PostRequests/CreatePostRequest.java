@@ -12,6 +12,7 @@ public class CreatePostRequest {
     private String title;
 
     private String content;
+    private int user;
 
-    private int author_id;
+
 }
