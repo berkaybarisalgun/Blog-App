@@ -6,6 +6,7 @@ import jakarta.persistence.PrePersist;
 import java.time.LocalDateTime;
 
 public class CommentListener {
+
     @PrePersist
     public void setCreateTime(Comment comment) {
         LocalDateTime now = LocalDateTime.now();

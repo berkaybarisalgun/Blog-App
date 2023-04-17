@@ -12,7 +12,9 @@ public class CreatePostRequest {
     private String title;
 
     private String content;
-    private int user;
+
+    private int userId;
+    //kendime not:eğer düzgün isimlendirmezsen maplemeyi yapmıyor.
 
 
 }

@@ -1,6 +1,7 @@
 package berkaybarisalgun.BlogApp.Business.Requests.CommentRequests;
 
 
+import berkaybarisalgun.BlogApp.Entities.Concretes.Post;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ public class CreateCommentRequest {
 
     private String email;
 
-    private int post_id;
+    private int postId;
 
 
 

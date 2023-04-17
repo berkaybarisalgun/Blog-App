@@ -29,6 +29,7 @@ public class PostController {
     public GetPostByIdResponse getByid(@PathVariable int id){
         return postService.getPostByIdResponse(id);
     }
+
     @PutMapping
     public void update(@RequestBody() UpdatePostRequest updatePostRequest){
         this.postService.update(updatePostRequest);

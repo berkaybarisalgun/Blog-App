@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class GetCommentByIdResponse {
 
+
+
     private int id;
 
     private String content;
@@ -21,6 +23,8 @@ public class GetCommentByIdResponse {
 
     private String email;
 
-    private String post_name;
+    private String postTitle;
+
+
 
 }
