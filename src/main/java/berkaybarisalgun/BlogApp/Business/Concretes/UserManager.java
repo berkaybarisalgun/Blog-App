@@ -20,8 +20,15 @@ public class UserManager implements UserService {
 
     @Override
     public GetUserByIdResponse getUserByIdResponse(int id) {
-        User user=userRepository.findById(id).orElseThrow();
-        GetUserByIdResponse getUserByIdResponse=modelMapperService.forResponse().map(user,GetUserByIdResponse.class);
-        return getUserByIdResponse;
+        System.out.println("burdaaaaaaaaaa6");
+        User user=userRepository.findById(id).orElse(null);
+        System.out.println("burdaaaaaaaaaa7");
+        if (user == null) {
+            System.out.println("burdaaaaaaaaaa9");
+            // Kullanıcı bulunamadıysa null döndürün veya bir istisna fırlatın.
+            return null;
+        }
+        System.out.println("burdaaaaaaaaaa8");
+        return modelMapperService.forResponse().map(user, GetUserByIdResponse.class);
     }
 }

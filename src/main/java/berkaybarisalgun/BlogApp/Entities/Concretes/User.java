@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Table(name="user")
@@ -26,6 +27,10 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "user")
-    List<Post> post;
+    List<Post> post=new ArrayList<>();
+
+    public List<Post> getPostsx() {
+        return post;
+    }
 
 }
